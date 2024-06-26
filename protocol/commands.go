@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//	http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -65,14 +65,14 @@ type ProductID uint32
 
 const (
 	ProductIDNuLinkME ProductID = 0x00550501
-	ProductIDNuLink1 ProductID = 0x00012009
+	ProductIDNuLink1  ProductID = 0x00012009
 )
 
 func (p ProductID) String() string {
 	switch p {
 	case ProductIDNuLinkME:
 		return "Nu-Link-Me"
-        case ProductIDNuLink1:
+	case ProductIDNuLink1:
 		return "Nu-Link1"
 	default:
 		return fmt.Sprintf("0x%08x", uint32(p))
@@ -133,7 +133,8 @@ const (
 	// test device. If multiple devices use it, then we'll rename
 	// this
 	ChipFamily1T8051 = 0x800
-//	ChipFamilyN76E003 = 0x800
+
+// ChipFamilyN76E003 = 0x800
 )
 
 func (f ChipFamily) String() string {
@@ -141,7 +142,7 @@ func (f ChipFamily) String() string {
 	case ChipFamilyM2351:
 		return "M2351"
 	case ChipFamily1T8051:
-		return "Nuvoton 1T 8051"		
+		return "Nuvoton 1T 8051"
 	default:
 		return fmt.Sprintf("0x%08x", uint32(f))
 	}
@@ -299,8 +300,9 @@ const (
 	//   0x00CCDDDD where
 	//		CC   = Company ID
 	// 		DDDD = Device ID
-	DeviceN76E003 = 0xDA3650
-        DeviceN76E616 = 0xDA2F50 
+	// DeviceN76E003 = 0xDA3650
+	DeviceN76E003 = 0xff3650
+	DeviceN76E616 = 0xDA2F50
 	DeviceMS51FB  = 0xDA4B21
 )
 
@@ -308,8 +310,8 @@ func (id DeviceID) String() string {
 	switch id {
 	case DeviceN76E003:
 		return "N76E003"
-        case DeviceN76E616:
-		return "N76E616"		
+	case DeviceN76E616:
+		return "N76E616"
 	case DeviceMS51FB:
 		return "MS51FB"
 	default:
