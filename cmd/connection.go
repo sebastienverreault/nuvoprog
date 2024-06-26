@@ -95,7 +95,7 @@ func connectToTarget() (*protocol.Device, *target.Definition, error) {
 
 	if devID != targetDev.DeviceID {
 		// return nil, nil, errors.New("Unsupported device")
-		return nil, nil, fmt.Errorf("Unsupported device (%s)", targetDev.DeviceID)
+		return nil, nil, fmt.Errorf("Unsupported device (current: %s vs expected: %s)", devID, targetDev.DeviceID)
 	}
 
 	// Swivel to prevent defer closing our device
