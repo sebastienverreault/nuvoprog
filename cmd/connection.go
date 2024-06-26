@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//	http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -17,8 +17,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/jdelphi/nuvoprog/protocol"
-	"github.com/jdelphi/nuvoprog/target"
+	"github.com/sebastienverreault/nuvoprog/protocol"
+	"github.com/sebastienverreault/nuvoprog/target"
 )
 
 func connectToTarget() (*protocol.Device, *target.Definition, error) {
@@ -94,7 +94,8 @@ func connectToTarget() (*protocol.Device, *target.Definition, error) {
 	}
 
 	if devID != targetDev.DeviceID {
-		return nil, nil, errors.New("Unsupported device")
+		// return nil, nil, errors.New("Unsupported device")
+		return nil, nil, fmt.Errorf("Unsupported device (%s)", targetDev.DeviceID)
 	}
 
 	// Swivel to prevent defer closing our device

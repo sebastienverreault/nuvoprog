@@ -19,7 +19,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/jdelphi/nuvoprog/target"
+	"github.com/sebastienverreault/nuvoprog/target"
 	"github.com/spf13/cobra"
 )
 

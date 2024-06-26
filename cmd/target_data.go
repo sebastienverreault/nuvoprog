@@ -25,8 +25,8 @@ import (
 	"os"
 	"strings"
 	"log"
-	"github.com/jdelphi/nuvoprog/ihex"
-	"github.com/jdelphi/nuvoprog/target"
+	"github.com/sebastienverreault/nuvoprog/ihex"
+	"github.com/sebastienverreault/nuvoprog/target"
 )
 
 type TargetData struct {
@@ -294,7 +294,7 @@ func ReadTargetData(
 	log.Printf("apromSz 0x%08x", apromSz)
 	log.Printf("ProgMemSize 0x%08x", td.ProgMemSize)
 	log.Printf("ldromSz 0x%08x", ldromSz)
-	
+
 	if ldromSz == 0 && ldrom != "" {
 		return nil, errors.New("ldrom parameter specified but configuration does not support LDROM")
 	}

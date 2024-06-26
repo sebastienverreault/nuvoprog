@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/jdelphi/nuvoprog/cmd"
+import "github.com/sebastienverreault/nuvoprog/cmd"
 
 func main() {
 	cmd.Execute()

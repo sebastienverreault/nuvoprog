@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/jdelphi/nuvoprog/protocol"
+	"github.com/sebastienverreault/nuvoprog/protocol"
 )
 
 type Config interface {
